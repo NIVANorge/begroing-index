@@ -55,4 +55,7 @@ jobs:
       - name: publish to pypi
         if: github.ref == 'refs/heads/main'
         run: poetry publish
+        env:
+          POETRY_HTTP_BASIC_PYPI_USERNAME: ${{ secrets.pypi_username }}
+          POETRY_HTTP_BASIC_PYPI_PASSWORD: ${{ secrets.pypi_password }}
 
