@@ -1,5 +1,15 @@
 # Index calculation
 
-## Questions
+This library provides functions for calculating data products that contribute towards reaching the goals of EU's water directive.
 
-- should we add validation such as "observations should be done in spring/autumn"?
+## Data products
+
+Currently, the following index calculations are supported:
+
+- PIT (periphyton index of trophic status)
+- AIP (acidification index periphyton)
+
+## TODO
+
+- HBI2
+- functions to calculate nEQR normalization

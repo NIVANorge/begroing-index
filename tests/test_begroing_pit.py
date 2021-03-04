@@ -2,9 +2,9 @@ from typing import Dict
 
 import pytest
 
-from niva_index.exceptions import UncertainIndexException
-from niva_index.begroing.pit import calc_pit, calc_pit_eqr
-from niva_index.indicator_values import load_indicator_values, calc_max_iv
+from begroing_index.exceptions import UncertainIndexException
+from begroing_index.begroing.pit import calc_pit, calc_pit_eqr
+from begroing_index.indicator_values import load_indicator_values, calc_max_iv
 
 
 @pytest.fixture(scope="module")

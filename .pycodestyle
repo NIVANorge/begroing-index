@@ -1,0 +1,4 @@
+[pycodestyle]
+max-line-length = 119
+# see https://github.com/psf/black/blob/master/docs/compatible_configs.md#why-those-options-above-1
+ignore = E203

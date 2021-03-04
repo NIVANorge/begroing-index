@@ -1,7 +1,7 @@
 from statistics import mean
 from typing import List
 
-from niva_index.exceptions import UncertainIndexException
+from begroing_index.exceptions import UncertainIndexException
 
 
 def aip_calc_ref(calc: float, toc: float):

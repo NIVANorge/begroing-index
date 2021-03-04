@@ -1,7 +1,7 @@
 from statistics import mean
 from typing import Final, List
 
-from niva_index.exceptions import UncertainIndexException
+from begroing_index.exceptions import UncertainIndexException
 
 
 def pit_ref_value(calc: float):

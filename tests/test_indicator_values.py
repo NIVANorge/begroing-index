@@ -1,4 +1,4 @@
-from niva_index.indicator_values import (
+from begroing_index.indicator_values import (
     iv_files,
     load_indicator_values,
     calc_min_iv,

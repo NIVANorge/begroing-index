@@ -1,0 +1,58 @@
+name: test-publish
+
+# Run this workflow every time a new commit pushed to your repository
+on: push
+
+jobs:
+  test:
+    name: "test and lint"
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8.7
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1.1.1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+
+      - name: restore dependencies from cache
+        uses: actions/cache@v2
+        with:
+          path: .venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Install dependencies
+        run: poetry install
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+
+      - name: Lint stylecheck with black
+        run: poetry run black --check begroing_index tests
+
+      - name: Stylecheck with pycodestyle
+        run: poetry run pycodestyle --config .pycodestyle begroing_index tests
+
+      - name: mypy type check
+        run: poetry run mypy begroing_index tests
+
+      - name: Run tests
+        run: poetry run pytest
+
+      - name: build
+        if: github.ref == 'refs/heads/main'
+        run: poetry build
+
+      - name: publish to pypi
+        if: github.ref == 'refs/heads/main'
+        run: poetry publish
+
