@@ -18,3 +18,12 @@ def test_indicator_values_csv_file_format_check():
 
         max_iv = calc_max_iv(iv_values, min_species_count=2)
         assert max_iv > 0
+
+        if index_name == "PIT":
+            # should support quotes
+            assert iv_values['Homoeothrix "grenet"']
+
+            # should support commas
+            assert iv_values['Spirogyra a (20-42μ,1K,L)']
+
+

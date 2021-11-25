@@ -4,8 +4,8 @@ from statistics import mean
 from typing import Dict
 
 iv_files = {
-    "PIT": "indicator_values_PIT.csv",
-    "AIP": "indicator_values_AIP.csv",
+    "PIT": "indicator_values_PIT.tsv",
+    "AIP": "indicator_values_AIP.tsv",
 }
 
 
@@ -16,7 +16,7 @@ def load_indicator_values(index_name: str) -> Dict[str, float]:
             os.path.dirname(__file__), "../indicator_values", iv_files[index_name]
         )
     ) as f:
-        reader = csv.DictReader(f, delimiter=";")
+        reader = csv.DictReader(f, dialect="excel-tab")
 
         for row in reader:
             if len(row.values()) != 2:
