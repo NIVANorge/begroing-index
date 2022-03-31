@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "begroing_index"
-version = "0.1.3"
+version = "0.2.0"
 description = ""
 authors = ["Håkon Drolsum Røkenes <hakon.drolsum.rokenes@niva.no>"]
 include = ["indicator_values/**/*.csv"]
