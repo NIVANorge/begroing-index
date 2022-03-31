@@ -41,9 +41,9 @@ def test_aip_case1(indicator_values):
         "Klebsormidium rivulare",
         "Microspora palustris",
         "Microspora palustris var minor",
-        "Mougeotia a/b (10-18μ)",
+        "Mougeotia a/b (10-18u)",
         "Scytonematopsis starmachii",
-        "Zygogonium sp3 (16-20μ)",
+        "Zygogonium sp3 (16-20u)",
     ]
 
     ivs = [indicator_values[s] for s in observed]

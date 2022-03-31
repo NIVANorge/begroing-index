@@ -58,9 +58,9 @@ def test_pit_case1(indicator_values):
         "Cosmarium spp.",
         "Klebsormidium rivulare",
         "Microspora palustris",
-        "Microspora palustris var. minor",
-        "Mougeotia a (6 -12μ)",
-        "Mougeotia a/b (10-18μ)",
+        "Microspora palustris var minor",
+        "Mougeotia a (6 -12u)",
+        "Mougeotia a/b (10-18u)",
         "Scytonematopsis starmachii",
         "Zygogonium spp.",
     ]
@@ -77,7 +77,7 @@ def test_pit_case2(indicator_values):
         "Leptolyngbya spp.",
         "Sphaerotilus natans",
         "Vaucheria spp.",
-        "Audouinella chalybea",
+        "Audouinella chalybaea",
     ]
 
     observed_ivs = [indicator_values[s] for s in observed_species]
