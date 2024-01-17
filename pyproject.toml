@@ -10,7 +10,7 @@ include = ["indicator_values/**/*.csv"]
 python = "^3.10"
 
 [tool.poetry.dev-dependencies]
-pytest = "6.2.2"
+pytest = "6.2.5"
 mypy = "^0.812"
 pycodestyle = "^2.6.0"
 black = "22.6.0"
