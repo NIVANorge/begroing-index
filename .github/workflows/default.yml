@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: "3.10"
 
       - name: Install Poetry
         uses: snok/install-poetry@v1
@@ -51,11 +51,3 @@ jobs:
       - name: build
         if: github.ref == 'refs/heads/main'
         run: poetry build
-
-      - name: publish to pypi
-        if: github.ref == 'refs/heads/main'
-        run: poetry publish
-        env:
-          POETRY_HTTP_BASIC_PYPI_USERNAME: ${{ secrets.pypi_username }}
-          POETRY_HTTP_BASIC_PYPI_PASSWORD: ${{ secrets.pypi_password }}
-
