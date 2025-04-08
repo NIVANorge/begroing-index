@@ -13,7 +13,7 @@ def load_indicator_values(index_name: str) -> Dict[str, float]:
     indicator_values = {}
     with open(
         os.path.join(
-            os.path.dirname(__file__), "../indicator_values", iv_files[index_name]
+            os.path.dirname(__file__), "./indicator_values", iv_files[index_name]
         )
     ) as f:
         reader = csv.DictReader(f, delimiter=";")
