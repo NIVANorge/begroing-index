@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "begroing_index"
-version = "0.3.4"
-description = "add indicator value for Tolypothrix helicophila (5.72) for PIT calculation"
+version = "0.3.5"
+description = "fix build issue"
 authors = ["Nathalie Risbakk <nri@niva.no>"]
 include = ["indicator_values/**/*.csv"]
 
